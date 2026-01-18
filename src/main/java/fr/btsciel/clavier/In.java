@@ -26,10 +26,9 @@ import java.io.InputStreamReader;
  * System.out.println(df.format(maValeurEnDecimal));
  */
 public class In {
-
     /*
-	 * @param in 
-	 * c'est une reference sur le flux du clavier
+     * @param in
+     * c'est une reference sur le flux du clavier
      */
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
@@ -42,21 +41,21 @@ public class In {
      */
     public static int readInteger() {
         /*
-		 * mot stocke les touches tapees au clavier
-		 * jusqu'a ce que l'utilisateur appuie sur 
-		 * la touche entree du clavier
+         * mot stocke les touches tapees au clavier
+         * jusqu'a ce que l'utilisateur appuie sur
+         * la touche entree du clavier
          */
-        String mot = null;        
+        String mot = null;
         do {
             try {
                 mot = new String(in.readLine());
                 int val = 0;
                 /*
-			 * Si des touches ont ete appuyees
+                 * Si des touches ont ete appuyees
                  */
-                if (mot.length() > 0) {                   
+                if (mot.length() > 0) {
                     /*
-				 * La valeur entiere est retournee
+                     * La valeur entiere est retournee
                      */
                     return Integer.valueOf(mot).intValue();
                 }
@@ -64,10 +63,10 @@ public class In {
             } catch (IOException e) {
                 System.out.println("Erreur de lecture du clavier " + e);
             }
-        } while (1 == 1);    
+        } while (1 == 1);
     }
 
-    
+
     /**
      * Cette methode permet de retourner les touches tapees par l'utilisateur
      * sous forme d'entier
@@ -78,21 +77,21 @@ public class In {
      */
     public static long readLong() {
         /*
-		 * mot stocke les touches tapees au clavier
-		 * jusqu'a ce que l'utilisateur appuie sur 
-		 * la touche entree du clavier
+         * mot stocke les touches tapees au clavier
+         * jusqu'a ce que l'utilisateur appuie sur
+         * la touche entree du clavier
          */
-        String mot = null;        
+        String mot = null;
         do {
             try {
                 mot = new String(in.readLine());
                 int val = 0;
                 /*
-			 * Si des touches ont ete appuyees
+                 * Si des touches ont ete appuyees
                  */
-                if (mot.length() > 0) {                   
+                if (mot.length() > 0) {
                     /*
-				 * La valeur entiere est retourn�e
+                     * La valeur entiere est retourn�e
                      */
                     return Long.valueOf(mot).longValue();
                 }
@@ -100,10 +99,10 @@ public class In {
             } catch (IOException e) {
                 System.out.println("Erreur de lecture du clavier " + e);
             }
-        } while (1 == 1);    
+        } while (1 == 1);
     }
-    
-    
+
+
 
     /**
      * Cette methode permet de retourner les touches tapees par l'utilisateur
@@ -116,18 +115,18 @@ public class In {
      */
     public static double readDouble() //throws Exception
     {
-        String mot = null;        
+        String mot = null;
         do {
             try {
                 mot = new String(in.readLine());
                 int val = 0;
                 /*
-			 * Si des touches ont ete appuyees
+                 * Si des touches ont ete appuyees
                  */
                 if (mot.length() > 0) {
-                  //  val = Integer.valueOf(mot).intValue();
+                    //  val = Integer.valueOf(mot).intValue();
                     /*
-				 * La valeur entiere est retournee
+                     * La valeur entiere est retournee
                      */
                     return Double.valueOf(mot).doubleValue();
                 }
@@ -135,7 +134,7 @@ public class In {
             } catch (IOException e) {
                 System.out.println("Erreur de lecture du clavier " + e);
             }
-        } while (1 == 1);        
+        } while (1 == 1);
     }
 
     /**
@@ -149,19 +148,19 @@ public class In {
      * flottant
      */
     public static float readFloat() {
-        
-       String mot = null;        
+
+        String mot = null;
         do {
             try {
                 mot = new String(in.readLine());
                 int val = 0;
                 /*
-			 * Si des touches ont ete appuyees
+                 * Si des touches ont ete appuyees
                  */
                 if (mot.length() > 0) {
-                  //  val = Integer.valueOf(mot).intValue();
+                    //  val = Integer.valueOf(mot).intValue();
                     /*
-				 * La valeur entiere est retournee
+                     * La valeur entiere est retournee
                      */
                     return Float.valueOf(mot).floatValue();
                 }
@@ -169,7 +168,7 @@ public class In {
             } catch (IOException e) {
                 System.out.println("Erreur de lecture du clavier " + e);
             }
-        } while (1 == 1);                             
+        } while (1 == 1);
     }
 
     /**
@@ -187,9 +186,9 @@ public class In {
         StringBuilder sb = new StringBuilder();
         try {
             /*
-			 * Retourne directemet les touches tapees au clavier
-			 * lorsque l'utilisateur a appuiye sur
-			 * la touche entree du clavier
+             * Retourne directemet les touches tapees au clavier
+             * lorsque l'utilisateur a appuiye sur
+             * la touche entree du clavier
              */
             do {
                 c = (char) System.in.read();
@@ -217,17 +216,17 @@ public class In {
         String mot = null;
         try {
             /*
-			 * mot stocke les touches tapees au clavier
-			 * jusqu'a ce que l'utilisateur appuie sur 
-			 * la touche entree du clavier
+             * mot stocke les touches tapees au clavier
+             * jusqu'a ce que l'utilisateur appuie sur
+             * la touche entree du clavier
              */
             mot = new String(in.readLine());
             /*
-			 * Si des touches ont ete appuyees
+             * Si des touches ont ete appuyees
              */
             if (mot.length() > 0) {
                 /*
-				 * La valeur de tpe char est retournee
+                 * La valeur de tpe char est retournee
                  */
                 return mot.charAt(0);
             }
@@ -235,8 +234,8 @@ public class In {
             System.out.println("Erreur de lecture du clavier " + e);
         } catch (NumberFormatException e1) {
             /*
-			 * Si la valeur saisie au clavier n'est pas un char,
-			 * je passe dans ce code
+             * Si la valeur saisie au clavier n'est pas un char,
+             * je passe dans ce code
              */
             System.out.println("Vous n'avez pas saisi un entier ");
         }
@@ -254,18 +253,18 @@ public class In {
      */
     public static byte readByte() //throws Exception
     {
-       String mot = null;        
+        String mot = null;
         do {
             try {
                 mot = new String(in.readLine());
                 int val = 0;
                 /*
-			 * Si des touches ont ete appuyees
+                 * Si des touches ont ete appuyees
                  */
                 if (mot.length() > 0) {
-                  //  val = Integer.valueOf(mot).intValue();
+                    //  val = Integer.valueOf(mot).intValue();
                     /*
-				 * La valeur entiere est retournee
+                     * La valeur entiere est retournee
                      */
                     return Byte.valueOf(mot).byteValue();
                 }
@@ -273,8 +272,8 @@ public class In {
             } catch (IOException e) {
                 System.out.println("Erreur de lecture du clavier " + e);
             }
-        } while (1 == 1);    
-        
+        } while (1 == 1);
+
     }
 
     /**
@@ -292,17 +291,17 @@ public class In {
         String mot = null;
         try {
             /*
-			 * mot stocke les touches tapees au clavier
-			 * jusqu'a ce que l'utilisateur appuie sur 
-			 * la touche entree du clavier
+             * mot stocke les touches tapees au clavier
+             * jusqu'a ce que l'utilisateur appuie sur
+             * la touche entree du clavier
              */
             mot = new String(in.readLine());
             /*
-			 * Si des touches ont ete appuyees
+             * Si des touches ont ete appuyees
              */
             if (mot.length() > 0) {
                 /*
-				 * La valeur est de type char[] est retournee
+                 * La valeur est de type char[] est retournee
                  */
                 return mot.toCharArray();
             }
@@ -310,8 +309,8 @@ public class In {
             System.out.println("Erreur de lecture du clavier " + e);
         } catch (NumberFormatException e1) {
             /*
-			 * Si la valeur saisie au clavier n'est pas un byte,
-			 * je passe dans ce code
+             * Si la valeur saisie au clavier n'est pas un byte,
+             * je passe dans ce code
              */
             System.out.println("Vous n'avez pas saisi un entier ");
         }
