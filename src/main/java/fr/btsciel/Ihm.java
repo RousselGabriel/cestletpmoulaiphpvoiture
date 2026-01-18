@@ -34,7 +34,6 @@ public class Ihm {
         for (Voitures v : listerVoitures.getListeDesVoitures()) {
             System.out.println("-----------------------------------------");
             System.out.println(v);
-            System.out.println("-----------------------------------------");
         }
     }
     /**
@@ -46,7 +45,6 @@ public class Ihm {
          for (Voitures v : listerVoitures.getListeDesVoitures()){
              System.out.println("-----------------------------------------");
              System.out.println(v.toStringMarqueModele());
-             System.out.println("-----------------------------------------");
          }
     }
     /**
@@ -58,7 +56,6 @@ public class Ihm {
         for (Voitures v : listerVoitures.getListeDesVoitures()){
             System.out.println("-----------------------------------------");
             System.out.println(v.toStringMarque());
-            System.out.println("-----------------------------------------");
         }
     }
 
